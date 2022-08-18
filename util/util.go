@@ -24,7 +24,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/dansen/pud/defaultlog/log"
 	"os"
 	"reflect"
 	"runtime/debug"
@@ -209,7 +208,7 @@ func StartSpanFromRequest(
 	}
 	parent, err := tracing.ExtractSpan(ctx)
 	if err != nil {
-		log.Warnf("failed to retrieve parent span: %s", err.Error())
+		// log.Warnf("failed to retrieve parent span: %s", err.Error())
 	}
 	ctx = tracing.StartSpan(ctx, route, tags, parent)
 	return ctx

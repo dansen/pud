@@ -174,8 +174,8 @@ func (h *HandlerService) Handle(conn acceptor.PlayerConn) {
 
 	// guarantee agent related resource is destroyed
 	defer func() {
+		log.Infof("Session read goroutine exit, SessionID=%v, UID=%v", a.GetSession().ID(), a.GetSession().UID())
 		a.GetSession().Close()
-		log.Infof("Session read goroutine exit, SessionID=%d, UID=%s", a.GetSession().ID(), a.GetSession().UID())
 	}()
 
 	for {
@@ -183,7 +183,7 @@ func (h *HandlerService) Handle(conn acceptor.PlayerConn) {
 
 		if err != nil {
 			if err != constants.ErrConnectionClosed {
-				log.Errorf("Error reading next available message: %s", err.Error())
+				// log.Errorf("Error reading next available message: %s", err.Error())
 			}
 
 			return
@@ -263,6 +263,7 @@ func (h *HandlerService) processPacket(a agent.Agent, p *packet.Packet) error {
 
 func (h *HandlerService) processMessage(a agent.Agent, msg *message.Message) {
 	requestID := nuid.New()
+	// 处理消息时才创建一个context上下文
 	ctx := pcontext.AddToPropagateCtx(context.Background(), constants.StartTimeKey, time.Now().UnixNano())
 	ctx = pcontext.AddToPropagateCtx(ctx, constants.RouteKey, msg.Route)
 	ctx = pcontext.AddToPropagateCtx(ctx, constants.RequestIDKey, requestID)
