@@ -22,9 +22,10 @@ package router
 
 import (
 	"context"
-	"github.com/dansen/pud/defaultlog/log"
 	"math/rand"
 	"time"
+
+	"github.com/dansen/pud/defaultlog/log"
 
 	"github.com/dansen/pud/cluster"
 	"github.com/dansen/pud/conn/message"
@@ -86,6 +87,7 @@ func (r *Router) Route(
 	// 通过svType在etcd中查找注册的服务器
 	serversOfType, err := r.serviceDiscovery.GetServersByType(svType)
 	if err != nil {
+		log.Warnf("route %v not found in server %v", msg.Route, svType)
 		return nil, err
 	}
 	if rpcType == protos.RPCType_User {

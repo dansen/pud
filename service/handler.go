@@ -24,9 +24,10 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/dansen/pud/defaultlog/log"
 	"strings"
 	"time"
+
+	"github.com/dansen/pud/defaultlog/log"
 
 	"github.com/nats-io/nuid"
 
@@ -292,9 +293,12 @@ func (h *HandlerService) processMessage(a agent.Agent, msg *message.Message) {
 		route: r,
 		msg:   msg,
 	}
+
+	// 通过第一个serverType标识识别是否是本地服务器
 	if r.SvType == h.server.Type {
 		h.chLocalProcess <- message
 	} else {
+		// 远程服务器，请求服务发现的逻辑
 		if h.remoteService != nil {
 			h.chRemoteProcess <- message
 		} else {
