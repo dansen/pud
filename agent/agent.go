@@ -25,12 +25,13 @@ import (
 	gojson "encoding/json"
 	e "errors"
 	"fmt"
-	"github.com/dansen/pud/defaultlog/log"
 	"net"
 	"strings"
 	"sync"
 	"sync/atomic"
 	"time"
+
+	"github.com/dansen/pud/defaultlog/log"
 
 	"github.com/dansen/pud/conn/codec"
 	"github.com/dansen/pud/conn/message"
@@ -205,6 +206,7 @@ func newAgent(
 	s := sessionPool.NewSession(a, true)
 	metrics.ReportNumberOfConnectedClients(metricsReporters, sessionPool.GetSessionCount())
 	a.Session = s
+	session.OnSessionInited(s)
 	return a
 }
 

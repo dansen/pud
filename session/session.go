@@ -23,12 +23,13 @@ package session
 import (
 	"context"
 	"encoding/json"
-	"github.com/dansen/pud/defaultlog/log"
 	"net"
 	"reflect"
 	"sync"
 	"sync/atomic"
 	"time"
+
+	"github.com/dansen/pud/defaultlog/log"
 
 	"github.com/dansen/pud/constants"
 	"github.com/dansen/pud/networkentity"
@@ -452,6 +453,9 @@ func (s *sessionImpl) Close() {
 		}
 	}
 	s.entity.Close()
+
+	var ss Session = s
+	OnSessionClosed(ss)
 }
 
 // RemoteAddr returns the remote network address.
