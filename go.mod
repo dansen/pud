@@ -1,4 +1,4 @@
-module github.com/topfreegames/pitaya/v2
+module github.com/dansen/pud
 
 go 1.17
 

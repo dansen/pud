@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/topfreegames/pitaya/v2/helpers"
+	"github.com/dansen/pud/helpers"
 )
 
 var update = flag.Bool("update", false, "update .golden files")

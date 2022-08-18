@@ -1,10 +1,10 @@
 package pud
 
 import (
-	"github.com/topfreegames/pitaya/v2/config"
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
-	"github.com/topfreegames/pitaya/v2/metrics"
-	"github.com/topfreegames/pitaya/v2/metrics/models"
+	"github.com/dansen/pud/config"
+	"github.com/dansen/pud/internal/generic/log"
+	"github.com/dansen/pud/metrics"
+	"github.com/dansen/pud/metrics/models"
 )
 
 // CreatePrometheusReporter create a Prometheus reporter instance

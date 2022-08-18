@@ -23,10 +23,10 @@ package remote
 import (
 	"context"
 
-	"github.com/topfreegames/pitaya/v2/component"
-	"github.com/topfreegames/pitaya/v2/constants"
-	"github.com/topfreegames/pitaya/v2/protos"
-	"github.com/topfreegames/pitaya/v2/session"
+	"github.com/dansen/pud/component"
+	"github.com/dansen/pud/constants"
+	"github.com/dansen/pud/protos"
+	"github.com/dansen/pud/session"
 )
 
 // Sys contains logic for handling sys remotes

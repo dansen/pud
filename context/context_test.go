@@ -30,8 +30,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/topfreegames/pitaya/v2/constants"
-	"github.com/topfreegames/pitaya/v2/helpers"
+	"github.com/dansen/pud/constants"
+	"github.com/dansen/pud/helpers"
 )
 
 var update = flag.Bool("update", false, "update .golden files")

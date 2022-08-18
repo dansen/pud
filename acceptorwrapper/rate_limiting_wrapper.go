@@ -21,9 +21,9 @@
 package acceptorwrapper
 
 import (
-	"github.com/topfreegames/pitaya/v2/acceptor"
-	"github.com/topfreegames/pitaya/v2/config"
-	"github.com/topfreegames/pitaya/v2/metrics"
+	"github.com/dansen/pud/acceptor"
+	"github.com/dansen/pud/config"
+	"github.com/dansen/pud/metrics"
 )
 
 // RateLimitingWrapper rate limits for each connection

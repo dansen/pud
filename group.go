@@ -24,8 +24,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/topfreegames/pitaya/v2/constants"
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
+	"github.com/dansen/pud/constants"
+	"github.com/dansen/pud/internal/generic/log"
 )
 
 // Group represents an agglomeration of UIDs which is used to manage

@@ -24,8 +24,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/topfreegames/pitaya/v2/component"
-	"github.com/topfreegames/pitaya/v2/config"
+	"github.com/dansen/pud/component"
+	"github.com/dansen/pud/config"
 )
 
 type MyComp struct {

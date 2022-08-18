@@ -26,8 +26,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/topfreegames/pitaya/v2/component"
-	"github.com/topfreegames/pitaya/v2/protos/test"
+	"github.com/dansen/pud/component"
+	"github.com/dansen/pud/protos/test"
 )
 
 type MyComp struct {

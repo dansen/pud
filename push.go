@@ -21,11 +21,11 @@
 package pud
 
 import (
-	"github.com/topfreegames/pitaya/v2/cluster"
-	"github.com/topfreegames/pitaya/v2/constants"
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
-	"github.com/topfreegames/pitaya/v2/protos"
-	"github.com/topfreegames/pitaya/v2/util"
+	"github.com/dansen/pud/cluster"
+	"github.com/dansen/pud/constants"
+	"github.com/dansen/pud/internal/generic/log"
+	"github.com/dansen/pud/protos"
+	"github.com/dansen/pud/util"
 )
 
 // SendPushToUsers sends a message to the given list of users

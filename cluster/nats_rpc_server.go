@@ -29,14 +29,14 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	nats "github.com/nats-io/nats.go"
-	"github.com/topfreegames/pitaya/v2/config"
-	"github.com/topfreegames/pitaya/v2/constants"
-	e "github.com/topfreegames/pitaya/v2/errors"
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
-	"github.com/topfreegames/pitaya/v2/metrics"
-	"github.com/topfreegames/pitaya/v2/protos"
-	"github.com/topfreegames/pitaya/v2/session"
-	"github.com/topfreegames/pitaya/v2/util"
+	"github.com/dansen/pud/config"
+	"github.com/dansen/pud/constants"
+	e "github.com/dansen/pud/errors"
+	"github.com/dansen/pud/internal/generic/log"
+	"github.com/dansen/pud/metrics"
+	"github.com/dansen/pud/protos"
+	"github.com/dansen/pud/session"
+	"github.com/dansen/pud/util"
 )
 
 // NatsRPCServer struct

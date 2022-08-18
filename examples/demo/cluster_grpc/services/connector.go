@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/topfreegames/pitaya/v2"
-	"github.com/topfreegames/pitaya/v2/component"
-	"github.com/topfreegames/pitaya/v2/examples/demo/protos"
+	"github.com/dansen/pud"
+	"github.com/dansen/pud/component"
+	"github.com/dansen/pud/examples/demo/protos"
 )
 
 // ConnectorRemote is a remote that will receive rpc's

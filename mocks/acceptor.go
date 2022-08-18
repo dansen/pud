@@ -6,7 +6,7 @@ package mocks
 
 import (
 	gomock "github.com/golang/mock/gomock"
-	acceptor "github.com/topfreegames/pitaya/v2/acceptor"
+	acceptor "github.com/dansen/pud/acceptor"
 	net "net"
 	reflect "reflect"
 	time "time"

@@ -5,11 +5,11 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/topfreegames/pitaya/v2"
-	"github.com/topfreegames/pitaya/v2/acceptor"
-	"github.com/topfreegames/pitaya/v2/component"
-	"github.com/topfreegames/pitaya/v2/config"
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
+	"github.com/dansen/pud"
+	"github.com/dansen/pud/acceptor"
+	"github.com/dansen/pud/component"
+	"github.com/dansen/pud/config"
+	"github.com/dansen/pud/internal/generic/log"
 )
 
 // MetagameServer ...

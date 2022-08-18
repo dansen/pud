@@ -28,10 +28,10 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"github.com/topfreegames/pitaya/v2/config"
-	"github.com/topfreegames/pitaya/v2/constants"
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
-	"github.com/topfreegames/pitaya/v2/metrics/models"
+	"github.com/dansen/pud/config"
+	"github.com/dansen/pud/constants"
+	"github.com/dansen/pud/internal/generic/log"
+	"github.com/dansen/pud/metrics/models"
 )
 
 var (

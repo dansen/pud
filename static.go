@@ -26,14 +26,14 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/spf13/viper"
-	"github.com/topfreegames/pitaya/v2/cluster"
-	"github.com/topfreegames/pitaya/v2/component"
-	"github.com/topfreegames/pitaya/v2/config"
-	"github.com/topfreegames/pitaya/v2/interfaces"
-	"github.com/topfreegames/pitaya/v2/metrics"
-	"github.com/topfreegames/pitaya/v2/router"
-	"github.com/topfreegames/pitaya/v2/session"
-	"github.com/topfreegames/pitaya/v2/worker"
+	"github.com/dansen/pud/cluster"
+	"github.com/dansen/pud/component"
+	"github.com/dansen/pud/config"
+	"github.com/dansen/pud/interfaces"
+	"github.com/dansen/pud/metrics"
+	"github.com/dansen/pud/router"
+	"github.com/dansen/pud/session"
+	"github.com/dansen/pud/worker"
 )
 
 var DefaultApp Pitaya

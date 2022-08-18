@@ -28,10 +28,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/topfreegames/pitaya/v2/config"
-	"github.com/topfreegames/pitaya/v2/constants"
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
-	"github.com/topfreegames/pitaya/v2/util"
+	"github.com/dansen/pud/config"
+	"github.com/dansen/pud/constants"
+	"github.com/dansen/pud/internal/generic/log"
+	"github.com/dansen/pud/util"
 	clientv3 "go.etcd.io/etcd/client/v3"
 	"go.etcd.io/etcd/client/v3/namespace"
 )

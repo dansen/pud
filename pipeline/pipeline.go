@@ -23,7 +23,7 @@ package pipeline
 import (
 	"context"
 
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
+	"github.com/dansen/pud/internal/generic/log"
 )
 
 type (

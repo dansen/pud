@@ -27,9 +27,9 @@ import (
 	"time"
 	clientv3 "go.etcd.io/etcd/client/v3"
 	"github.com/stretchr/testify/assert"
-	"github.com/topfreegames/pitaya/v2/config"
-	"github.com/topfreegames/pitaya/v2/constants"
-	"github.com/topfreegames/pitaya/v2/helpers"
+	"github.com/dansen/pud/config"
+	"github.com/dansen/pud/constants"
+	"github.com/dansen/pud/helpers"
 )
 
 var etcdSDTables = []struct {

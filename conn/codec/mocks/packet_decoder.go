@@ -6,7 +6,7 @@ package mocks
 
 import (
 	gomock "github.com/golang/mock/gomock"
-	packet "github.com/topfreegames/pitaya/v2/conn/packet"
+	packet "github.com/dansen/pud/conn/packet"
 	reflect "reflect"
 )
 

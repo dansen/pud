@@ -21,8 +21,8 @@
 package pud
 
 import (
-	"github.com/topfreegames/pitaya/v2/component"
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
+	"github.com/dansen/pud/component"
+	"github.com/dansen/pud/internal/generic/log"
 )
 
 type regComp struct {

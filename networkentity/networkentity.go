@@ -4,7 +4,7 @@ import (
 	"context"
 	"net"
 
-	"github.com/topfreegames/pitaya/v2/protos"
+	"github.com/dansen/pud/protos"
 )
 
 // NetworkEntity represent low-level network instance

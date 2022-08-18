@@ -29,9 +29,9 @@ import (
 
 	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/stretchr/testify/assert"
-	"github.com/topfreegames/pitaya/v2/constants"
-	pcontext "github.com/topfreegames/pitaya/v2/context"
-	"github.com/topfreegames/pitaya/v2/tracing/jaeger"
+	"github.com/dansen/pud/constants"
+	pcontext "github.com/dansen/pud/context"
+	"github.com/dansen/pud/tracing/jaeger"
 )
 
 var closer io.Closer

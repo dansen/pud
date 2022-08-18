@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/topfreegames/pitaya/v2/constants"
-	_ "github.com/topfreegames/pitaya/v2/protos"
+	"github.com/dansen/pud/constants"
+	_ "github.com/dansen/pud/protos"
 )
 
 func TestProtoDescriptors(t *testing.T) {

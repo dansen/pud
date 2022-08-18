@@ -9,15 +9,15 @@ import (
 
 	"strings"
 
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
-	"github.com/topfreegames/pitaya/v2/internal/generic/log/lowlevel"
+	"github.com/dansen/pud/internal/generic/log"
+	"github.com/dansen/pud/internal/generic/log/lowlevel"
 
-	"github.com/topfreegames/pitaya/v2"
-	"github.com/topfreegames/pitaya/v2/acceptor"
-	"github.com/topfreegames/pitaya/v2/component"
-	"github.com/topfreegames/pitaya/v2/config"
-	"github.com/topfreegames/pitaya/v2/groups"
-	"github.com/topfreegames/pitaya/v2/timer"
+	"github.com/dansen/pud"
+	"github.com/dansen/pud/acceptor"
+	"github.com/dansen/pud/component"
+	"github.com/dansen/pud/config"
+	"github.com/dansen/pud/groups"
+	"github.com/dansen/pud/timer"
 )
 
 type (

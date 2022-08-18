@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/topfreegames/pitaya/v2/config"
-	"github.com/topfreegames/pitaya/v2/constants"
+	"github.com/dansen/pud/config"
+	"github.com/dansen/pud/constants"
 	"go.etcd.io/etcd/api/v3/mvccpb"
 	clientv3 "go.etcd.io/etcd/client/v3"
 	"go.etcd.io/etcd/client/v3/namespace"

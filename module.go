@@ -23,8 +23,8 @@ package pud
 import (
 	"fmt"
 
-	"github.com/topfreegames/pitaya/v2/interfaces"
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
+	"github.com/dansen/pud/interfaces"
+	"github.com/dansen/pud/internal/generic/log"
 )
 
 type moduleWrapper struct {

@@ -23,7 +23,7 @@ package message
 import (
 	"encoding/binary"
 
-	"github.com/topfreegames/pitaya/v2/util/compression"
+	"github.com/dansen/pud/util/compression"
 )
 
 // Encoder interface

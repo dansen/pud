@@ -31,10 +31,10 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	nats "github.com/nats-io/nats.go"
-	"github.com/topfreegames/pitaya/v2/constants"
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
-	"github.com/topfreegames/pitaya/v2/networkentity"
-	"github.com/topfreegames/pitaya/v2/protos"
+	"github.com/dansen/pud/constants"
+	"github.com/dansen/pud/internal/generic/log"
+	"github.com/dansen/pud/networkentity"
+	"github.com/dansen/pud/protos"
 )
 
 type sessionPoolImpl struct {

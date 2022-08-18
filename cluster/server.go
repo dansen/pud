@@ -24,7 +24,7 @@ import (
 	"encoding/json"
 	"os"
 
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
+	"github.com/dansen/pud/internal/generic/log"
 )
 
 // Server struct

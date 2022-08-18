@@ -24,7 +24,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/topfreegames/pitaya/v2/config"
+	"github.com/dansen/pud/config"
 )
 
 var memoryGroupService *MemoryGroupService

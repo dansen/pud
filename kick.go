@@ -23,9 +23,9 @@ package pud
 import (
 	"context"
 
-	"github.com/topfreegames/pitaya/v2/constants"
-	"github.com/topfreegames/pitaya/v2/internal/generic/log"
-	"github.com/topfreegames/pitaya/v2/protos"
+	"github.com/dansen/pud/constants"
+	"github.com/dansen/pud/internal/generic/log"
+	"github.com/dansen/pud/protos"
 )
 
 // SendKickToUsers sends kick to an user array

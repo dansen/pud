@@ -7,9 +7,9 @@ package mocks
 import (
 	context "context"
 	gomock "github.com/golang/mock/gomock"
-	agent "github.com/topfreegames/pitaya/v2/agent"
-	protos "github.com/topfreegames/pitaya/v2/protos"
-	session "github.com/topfreegames/pitaya/v2/session"
+	agent "github.com/dansen/pud/agent"
+	protos "github.com/dansen/pud/protos"
+	session "github.com/dansen/pud/session"
 	net "net"
 	reflect "reflect"
 )
