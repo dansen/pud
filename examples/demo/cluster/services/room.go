@@ -19,7 +19,7 @@ type (
 	Room struct {
 		component.Base
 		timer *timer.Timer
-		app   pitaya.Pitaya
+		app   pud.Pitaya
 		Stats *protos.Stats
 	}
 
@@ -65,7 +65,7 @@ type (
 )
 
 // NewRoom returns a new room
-func NewRoom(app pitaya.Pitaya) *Room {
+func NewRoom(app pud.Pitaya) *Room {
 	return &Room{
 		app:   app,
 		Stats: &protos.Stats{},
@@ -79,7 +79,7 @@ func (r *Room) Init() {
 
 // AfterInit component lifetime callback
 func (r *Room) AfterInit() {
-	r.timer = pitaya.NewTimer(time.Minute, func() {
+	r.timer = pud.NewTimer(time.Minute, func() {
 		count, _ := r.app.GroupCountMembers(context.Background(), "room")
 		log.Infof("room user count %v", count)
 	})
@@ -92,7 +92,7 @@ func (r *Room) Entry(ctx context.Context, msg []byte) (*protos.JoinResponse, err
 	err := s.Bind(ctx, uuid.New().String())
 	if err != nil {
 		log.Errorf("Failed to bind session %v", err.Error())
-		return nil, pitaya.Error(err, "RH-000", map[string]string{"failed": "bind"})
+		return nil, pud.Error(err, "RH-000", map[string]string{"failed": "bind"})
 	}
 	return &protos.JoinResponse{Result: "ok"}, nil
 }
@@ -156,7 +156,7 @@ func (r *Room) SendRPC(ctx context.Context, msg *protos.SendRPCMsg) (*protos.RPC
 	err := r.app.RPCTo(ctx, msg.ServerId, msg.Route, ret, &protos.RPCMsg{Msg: msg.Msg})
 	if err != nil {
 		log.Errorf("Failed to execute RPCTo %v - %v %v", msg.ServerId, msg.Route, err)
-		return nil, pitaya.Error(err, "RPC-000")
+		return nil, pud.Error(err, "RPC-000")
 	}
 	return ret, nil
 }

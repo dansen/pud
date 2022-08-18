@@ -14,13 +14,13 @@ import (
 // ConnectorRemote is a remote that will receive rpc's
 type ConnectorRemote struct {
 	component.Base
-	app pitaya.Pitaya
+	app pud.Pitaya
 }
 
 // Connector struct
 type Connector struct {
 	component.Base
-	app pitaya.Pitaya
+	app pud.Pitaya
 }
 
 // SessionData struct
@@ -35,12 +35,12 @@ type Response struct {
 }
 
 // NewConnector ctor
-func NewConnector(app pitaya.Pitaya) *Connector {
+func NewConnector(app pud.Pitaya) *Connector {
 	return &Connector{app: app}
 }
 
 // NewConnectorRemote ctor
-func NewConnectorRemote(app pitaya.Pitaya) *ConnectorRemote {
+func NewConnectorRemote(app pud.Pitaya) *ConnectorRemote {
 	return &ConnectorRemote{app: app}
 }
 
@@ -66,7 +66,7 @@ func (c *Connector) SetSessionData(ctx context.Context, data *SessionData) (*pro
 	s := c.app.GetSessionFromCtx(ctx)
 	err := s.SetData(data.Data)
 	if err != nil {
-		return nil, pitaya.Error(err, "CN-000", map[string]string{"failed": "set data"})
+		return nil, pud.Error(err, "CN-000", map[string]string{"failed": "set data"})
 	}
 	return reply(200, "success")
 }
@@ -107,7 +107,7 @@ func (c *ConnectorRemote) Descriptor(ctx context.Context, names *pitayaprotos.Pr
 	descriptors := make([][]byte, len(names.Name))
 
 	for i, protoName := range names.Name {
-		desc, err := pitaya.Descriptor(protoName)
+		desc, err := pud.Descriptor(protoName)
 		if err != nil {
 			return nil, fmt.Errorf("failed to get descriptor for '%s': %w", protoName, err)
 		}

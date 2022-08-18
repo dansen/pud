@@ -26,7 +26,7 @@ type (
 	Room struct {
 		component.Base
 		timer *timer.Timer
-		app   pitaya.Pitaya
+		app   pud.Pitaya
 	}
 
 	// UserMessage represents a message that user sent
@@ -53,7 +53,7 @@ type (
 )
 
 // NewRoom returns a Handler Base implementation
-func NewRoom(app pitaya.Pitaya) *Room {
+func NewRoom(app pud.Pitaya) *Room {
 	return &Room{
 		app: app,
 	}
@@ -61,7 +61,7 @@ func NewRoom(app pitaya.Pitaya) *Room {
 
 // AfterInit component lifetime callback
 func (r *Room) AfterInit() {
-	r.timer = pitaya.NewTimer(time.Minute, func() {
+	r.timer = pud.NewTimer(time.Minute, func() {
 		count, err := r.app.GroupCountMembers(context.Background(), "room")
 		log.Debugf("UserCount: Time=> %s, Count=> %d, Error=> %q", time.Now().String(), count, err)
 	})
@@ -74,7 +74,7 @@ func (r *Room) Join(ctx context.Context, msg []byte) (*JoinResponse, error) {
 	err := s.Bind(ctx, strconv.Itoa(int(fakeUID))) // binding session uid
 
 	if err != nil {
-		return nil, pitaya.Error(err, "RH-000", map[string]string{"failed": "bind"})
+		return nil, pud.Error(err, "RH-000", map[string]string{"failed": "bind"})
 	}
 
 	uids, err := r.app.GroupMembers(ctx, "room")
@@ -103,13 +103,13 @@ func (r *Room) Message(ctx context.Context, msg *UserMessage) {
 	}
 }
 
-var app pitaya.Pitaya
+var app pud.Pitaya
 
 func main() {
 	log.SetLogger(lowlevel.NewDefaultLogger())
 
 	conf := configApp()
-	builder := pitaya.NewDefaultBuilder(true, "chat", pitaya.Cluster, map[string]string{}, *conf)
+	builder := pud.NewDefaultBuilder(true, "chat", pud.Cluster, map[string]string{}, *conf)
 	builder.AddAcceptor(acceptor.NewWSAcceptor(":3250"))
 	builder.Groups = groups.NewMemoryGroupService(*config.NewDefaultMemoryGroupConfig())
 	app = builder.Build()

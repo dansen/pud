@@ -1,4 +1,4 @@
-package pitaya
+package pud
 
 import (
 	"github.com/google/uuid"

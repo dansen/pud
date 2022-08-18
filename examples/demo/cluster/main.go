@@ -19,7 +19,7 @@ import (
 	"github.com/topfreegames/pitaya/v2/route"
 )
 
-var app pitaya.Pitaya
+var app pud.Pitaya
 
 func configureBackend() {
 	room := services.NewRoom(app)
@@ -84,7 +84,7 @@ func main() {
 	flag.Parse()
 
 	builderConfig := config.NewDefaultBuilderConfig()
-	builder := pitaya.NewDefaultBuilder(*isFrontend, *svType, pitaya.Cluster, map[string]string{}, *builderConfig)
+	builder := pud.NewDefaultBuilder(*isFrontend, *svType, pud.Cluster, map[string]string{}, *builderConfig)
 
 	if *isFrontend {
 		// 前端接受客户端

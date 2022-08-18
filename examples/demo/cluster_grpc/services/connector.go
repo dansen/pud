@@ -17,7 +17,7 @@ type ConnectorRemote struct {
 // Connector struct
 type Connector struct {
 	component.Base
-	app pitaya.Pitaya
+	app pud.Pitaya
 }
 
 // SessionData struct
@@ -32,7 +32,7 @@ type Response struct {
 }
 
 // NewConnector ctor
-func NewConnector(app pitaya.Pitaya) *Connector {
+func NewConnector(app pud.Pitaya) *Connector {
 	return &Connector{app: app}
 }
 
@@ -58,7 +58,7 @@ func (c *Connector) SetSessionData(ctx context.Context, data *SessionData) (*Res
 	s := c.app.GetSessionFromCtx(ctx)
 	err := s.SetData(data.Data)
 	if err != nil {
-		return nil, pitaya.Error(err, "CN-000", map[string]string{"failed": "set data"})
+		return nil, pud.Error(err, "CN-000", map[string]string{"failed": "set data"})
 	}
 	return reply(200, "success")
 }

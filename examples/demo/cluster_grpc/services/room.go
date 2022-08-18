@@ -19,7 +19,7 @@ type (
 	Room struct {
 		component.Base
 		timer *timer.Timer
-		app   pitaya.Pitaya
+		app   pud.Pitaya
 		Stats *Stats
 	}
 
@@ -72,7 +72,7 @@ func (Stats *Stats) Inbound(ctx context.Context, in []byte) ([]byte, error) {
 }
 
 // NewRoom returns a new room
-func NewRoom(app pitaya.Pitaya) *Room {
+func NewRoom(app pud.Pitaya) *Room {
 	return &Room{
 		app:   app,
 		Stats: &Stats{},
@@ -89,7 +89,7 @@ func (r *Room) Init() {
 
 // AfterInit component lifetime callback
 func (r *Room) AfterInit() {
-	r.timer = pitaya.NewTimer(time.Minute, func() {
+	r.timer = pud.NewTimer(time.Minute, func() {
 		count, err := r.app.GroupCountMembers(context.Background(), "room")
 		println("UserCount: Time=>", time.Now().String(), "Count=>", count, "Error=>", err)
 		println("OutboundBytes", r.Stats.outboundBytes)
@@ -102,7 +102,7 @@ func (r *Room) Entry(ctx context.Context, msg []byte) (*JoinResponse, error) {
 	s := r.app.GetSessionFromCtx(ctx)
 	err := s.Bind(ctx, strconv.Itoa(int(s.ID())))
 	if err != nil {
-		return nil, pitaya.Error(err, "RH-000", map[string]string{"failed": "bind"})
+		return nil, pud.Error(err, "RH-000", map[string]string{"failed": "bind"})
 	}
 	return &JoinResponse{Result: "ok"}, nil
 }
@@ -164,7 +164,7 @@ func (r *Room) SendRPC(ctx context.Context, msg *protos.RPCMsg) (*protos.RPCRes,
 	ret := &protos.RPCRes{}
 	err := r.app.RPC(ctx, "connector.connectorremote.remotefunc", ret, msg)
 	if err != nil {
-		return nil, pitaya.Error(err, "RPC-000")
+		return nil, pud.Error(err, "RPC-000")
 	}
 	return ret, nil
 }

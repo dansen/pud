@@ -49,7 +49,7 @@ import (
 // TestSvc service for e2e tests
 type TestSvc struct {
 	component.Base
-	app         pitaya.Pitaya
+	app         pud.Pitaya
 	sessionPool session.SessionPool
 }
 
@@ -88,7 +88,7 @@ func (tr *TestRemoteSvc) RPCTestPtrReturnsPtr(ctx context.Context, req *test.Tes
 
 // RPCTestReturnsError remote for e2e tests
 func (tr *TestRemoteSvc) RPCTestReturnsError(ctx context.Context, data *test.TestRequest) (*test.TestResponse, error) {
-	return nil, pitaya.Error(errors.New("test error"), "PIT-433", map[string]string{"some": "meta"})
+	return nil, pud.Error(errors.New("test error"), "PIT-433", map[string]string{"some": "meta"})
 }
 
 // RPCTestNoArgs remote for e2e tests
@@ -111,7 +111,7 @@ func (t *TestSvc) Init() {
 func (t *TestSvc) TestRequestKickUser(ctx context.Context, userID []byte) (*test.TestResponse, error) {
 	s := t.sessionPool.GetSessionByUID(string(userID))
 	if s == nil {
-		return nil, pitaya.Error(constants.ErrSessionNotFound, "PIT-404")
+		return nil, pud.Error(constants.ErrSessionNotFound, "PIT-404")
 	}
 	err := s.Kick(ctx)
 	if err != nil {
@@ -127,7 +127,7 @@ func (t *TestSvc) TestRequestKickUser(ctx context.Context, userID []byte) (*test
 func (t *TestSvc) TestRequestKickMe(ctx context.Context) (*test.TestResponse, error) {
 	s := t.app.GetSessionFromCtx(ctx)
 	if s == nil {
-		return nil, pitaya.Error(constants.ErrSessionNotFound, "PIT-404")
+		return nil, pud.Error(constants.ErrSessionNotFound, "PIT-404")
 	}
 	err := s.Kick(ctx)
 	if err != nil {
@@ -177,7 +177,7 @@ func (t *TestSvc) TestRequestReceiveReturnsRaw(ctx context.Context, in []byte) (
 
 // TestRequestReturnsError handler for e2e tests
 func (t *TestSvc) TestRequestReturnsError(ctx context.Context, in []byte) ([]byte, error) {
-	return nil, pitaya.Error(errors.New("somerror"), "PIT-555")
+	return nil, pud.Error(errors.New("somerror"), "PIT-555")
 }
 
 // TestBind handler for e2e tests
@@ -186,11 +186,11 @@ func (t *TestSvc) TestBind(ctx context.Context) ([]byte, error) {
 	s := t.app.GetSessionFromCtx(ctx)
 	err := s.Bind(ctx, uid)
 	if err != nil {
-		return nil, pitaya.Error(err, "PIT-444")
+		return nil, pud.Error(err, "PIT-444")
 	}
 	err = t.app.GroupAddMember(ctx, "g1", s.UID())
 	if err != nil {
-		return nil, pitaya.Error(err, "PIT-441")
+		return nil, pud.Error(err, "PIT-441")
 	}
 	return []byte("ack"), nil
 }
@@ -200,11 +200,11 @@ func (t *TestSvc) TestBindID(ctx context.Context, byteUID []byte) ([]byte, error
 	s := t.app.GetSessionFromCtx(ctx)
 	err := s.Bind(ctx, string(byteUID))
 	if err != nil {
-		return nil, pitaya.Error(err, "PIT-444")
+		return nil, pud.Error(err, "PIT-444")
 	}
 	err = t.app.GroupAddMember(ctx, "g1", s.UID())
 	if err != nil {
-		return nil, pitaya.Error(err, "PIT-441")
+		return nil, pud.Error(err, "PIT-441")
 	}
 	return []byte("ack"), nil
 }
@@ -269,9 +269,9 @@ func main() {
 		l.SetLevel(logrus.DebugLevel)
 	}
 
-	pitaya.SetLogger(logruswrapper.NewWithFieldLogger(l))
+	pud.SetLogger(logruswrapper.NewWithFieldLogger(l))
 
-	app, bs, sessionPool := createApp(*serializer, *port, *grpc, *isFrontend, *svType, pitaya.Cluster, map[string]string{
+	app, bs, sessionPool := createApp(*serializer, *port, *grpc, *isFrontend, *svType, pud.Cluster, map[string]string{
 		constants.GRPCHostKey: "127.0.0.1",
 		constants.GRPCPortKey: fmt.Sprintf("%d", *grpcPort),
 	}, cfg)
@@ -298,9 +298,9 @@ func main() {
 	app.Start()
 }
 
-func createApp(serializer string, port int, grpc bool, isFrontend bool, svType string, serverMode pitaya.ServerMode, metadata map[string]string, cfg ...*viper.Viper) (pitaya.Pitaya, *modules.ETCDBindingStorage, session.SessionPool) {
+func createApp(serializer string, port int, grpc bool, isFrontend bool, svType string, serverMode pud.ServerMode, metadata map[string]string, cfg ...*viper.Viper) (pud.Pitaya, *modules.ETCDBindingStorage, session.SessionPool) {
 	conf := config.NewConfig(cfg...)
-	builder := pitaya.NewBuilderWithConfigs(isFrontend, svType, serverMode, metadata, conf)
+	builder := pud.NewBuilderWithConfigs(isFrontend, svType, serverMode, metadata, conf)
 
 	if isFrontend {
 		tcp := acceptor.NewTCPAcceptor(fmt.Sprintf(":%d", port))

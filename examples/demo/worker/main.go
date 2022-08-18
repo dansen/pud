@@ -14,7 +14,7 @@ import (
 	"github.com/topfreegames/pitaya/v2/examples/demo/worker/services"
 )
 
-var app pitaya.Pitaya
+var app pud.Pitaya
 
 func configureWorker() {
 	worker := services.Worker{}
@@ -36,7 +36,7 @@ func main() {
 
 	tcp := acceptor.NewTCPAcceptor(fmt.Sprintf(":%d", *port))
 
-	builder := pitaya.NewBuilderWithConfigs(*isFrontend, *svType, pitaya.Cluster, map[string]string{}, config)
+	builder := pud.NewBuilderWithConfigs(*isFrontend, *svType, pud.Cluster, map[string]string{}, config)
 	if *isFrontend {
 		builder.AddAcceptor(tcp)
 	}

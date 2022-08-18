@@ -20,7 +20,7 @@ import (
 	"github.com/topfreegames/pitaya/v2/route"
 )
 
-var app pitaya.Pitaya
+var app pud.Pitaya
 
 func configureBackend() {
 	room := services.NewRoom(app)
@@ -102,8 +102,8 @@ func main() {
 	app.Start()
 }
 
-func createApp(port int, isFrontend bool, svType string, meta map[string]string, rpcServerPort int) (pitaya.Pitaya, *modules.ETCDBindingStorage) {
-	builder := pitaya.NewDefaultBuilder(isFrontend, svType, pitaya.Cluster, meta, *config.NewDefaultBuilderConfig())
+func createApp(port int, isFrontend bool, svType string, meta map[string]string, rpcServerPort int) (pud.Pitaya, *modules.ETCDBindingStorage) {
+	builder := pud.NewDefaultBuilder(isFrontend, svType, pud.Cluster, meta, *config.NewDefaultBuilderConfig())
 
 	grpcServerConfig := config.NewDefaultGRPCServerConfig()
 	grpcServerConfig.Port = rpcServerPort

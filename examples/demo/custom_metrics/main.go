@@ -13,7 +13,7 @@ import (
 	"github.com/topfreegames/pitaya/v2/examples/demo/custom_metrics/services"
 )
 
-var app pitaya.Pitaya
+var app pud.Pitaya
 
 func main() {
 	port := flag.Int("port", 3250, "the port to listen")
@@ -33,7 +33,7 @@ func main() {
 	tcp := acceptor.NewTCPAcceptor(fmt.Sprintf(":%d", *port))
 
 	conf := config.NewConfig(cfg)
-	builder := pitaya.NewBuilderWithConfigs(isFrontend, svType, pitaya.Cluster, map[string]string{}, conf)
+	builder := pud.NewBuilderWithConfigs(isFrontend, svType, pud.Cluster, map[string]string{}, conf)
 	builder.AddAcceptor(tcp)
 	app = builder.Build()
 

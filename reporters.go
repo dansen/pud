@@ -1,4 +1,4 @@
-package pitaya
+package pud
 
 import (
 	"github.com/topfreegames/pitaya/v2/config"

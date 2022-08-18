@@ -11,11 +11,11 @@ import (
 // Room server
 type Room struct {
 	component.Base
-	app pitaya.Pitaya
+	app pud.Pitaya
 }
 
 // NewRoom ctor
-func NewRoom(app pitaya.Pitaya) *Room {
+func NewRoom(app pud.Pitaya) *Room {
 	return &Room{
 		app: app,
 	}
