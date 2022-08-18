@@ -1,0 +1,1 @@
+go run ./game -port=3250

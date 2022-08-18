@@ -1,0 +1,29 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+etcd-v3.4.20-windows-amd64
+nats-server-v2.8.4-windows-amd64
+*.so
+*.dylib
+*.PID
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+.DS_Store
+
+# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
+.glide/
+/bin/
+.idea/
+vendor
+debug
+
+# vim temp files
+*.swp
+*.swo
+
+examples/testing/server
+examples/demo/cluster_grpc/main
