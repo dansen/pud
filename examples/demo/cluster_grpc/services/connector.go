@@ -17,7 +17,7 @@ type ConnectorRemote struct {
 // Connector struct
 type Connector struct {
 	component.Base
-	app pud.Pitaya
+	app pud.PudApp
 }
 
 // SessionData struct
@@ -32,7 +32,7 @@ type Response struct {
 }
 
 // NewConnector ctor
-func NewConnector(app pud.Pitaya) *Connector {
+func NewConnector(app pud.PudApp) *Connector {
 	return &Connector{app: app}
 }
 

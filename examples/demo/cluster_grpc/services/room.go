@@ -19,7 +19,7 @@ type (
 	Room struct {
 		component.Base
 		timer *timer.Timer
-		app   pud.Pitaya
+		app   pud.PudApp
 		Stats *Stats
 	}
 
@@ -72,7 +72,7 @@ func (Stats *Stats) Inbound(ctx context.Context, in []byte) ([]byte, error) {
 }
 
 // NewRoom returns a new room
-func NewRoom(app pud.Pitaya) *Room {
+func NewRoom(app pud.PudApp) *Room {
 	return &Room{
 		app:   app,
 		Stats: &Stats{},

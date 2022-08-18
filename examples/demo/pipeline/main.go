@@ -84,7 +84,7 @@ func (g *MetagameServer) simpleAfter(ctx context.Context, resp interface{}, err 
 	return resp, err
 }
 
-var app pud.Pitaya
+var app pud.PudApp
 
 func main() {
 	svType := flag.String("type", "metagameDemo", "the server type")

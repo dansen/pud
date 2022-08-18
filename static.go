@@ -36,7 +36,7 @@ import (
 	"github.com/dansen/pud/worker"
 )
 
-var DefaultApp Pitaya
+var DefaultApp PudApp
 
 // Configure configures the app
 func Configure(

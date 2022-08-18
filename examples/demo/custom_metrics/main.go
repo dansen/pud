@@ -13,7 +13,7 @@ import (
 	"github.com/dansen/pud/examples/demo/custom_metrics/services"
 )
 
-var app pud.Pitaya
+var app pud.PudApp
 
 func main() {
 	port := flag.Int("port", 3250, "the port to listen")

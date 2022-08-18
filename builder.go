@@ -46,7 +46,7 @@ type Builder struct {
 
 // PitayaBuilder Builder interface
 type PitayaBuilder interface {
-	Build() Pitaya
+	Build() PudApp
 }
 
 // NewBuilderWithConfigs return a builder instance with default dependency instances for a pitaya App
@@ -222,7 +222,7 @@ func (builder *Builder) AddAcceptor(ac acceptor.Acceptor) {
 }
 
 // Build returns a valid App instance
-func (builder *Builder) Build() Pitaya {
+func (builder *Builder) Build() PudApp {
 	handlerPool := service.NewHandlerPool()
 	var remoteService *service.RemoteService
 	if builder.ServerMode == Standalone {
@@ -298,7 +298,7 @@ func (builder *Builder) Build() Pitaya {
 }
 
 // NewDefaultApp returns a default pitaya app instance
-func NewDefaultApp(isFrontend bool, serverType string, serverMode ServerMode, serverMetadata map[string]string, config config.BuilderConfig) Pitaya {
+func NewDefaultApp(isFrontend bool, serverType string, serverMode ServerMode, serverMetadata map[string]string, config config.BuilderConfig) PudApp {
 	builder := NewDefaultBuilder(isFrontend, serverType, serverMode, serverMetadata, config)
 	return builder.Build()
 }

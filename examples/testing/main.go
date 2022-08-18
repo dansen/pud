@@ -49,7 +49,7 @@ import (
 // TestSvc service for e2e tests
 type TestSvc struct {
 	component.Base
-	app         pud.Pitaya
+	app         pud.PudApp
 	sessionPool session.SessionPool
 }
 
@@ -244,7 +244,7 @@ func (t *TestSvc) TestSendRPCNoArgs(ctx context.Context, msg *TestRPCRequest) (*
 	return rep, nil
 }
 
-// var app pitaya.Pitaya
+// var app pitaya.PudApp
 
 func main() {
 	port := flag.Int("port", 32222, "the port to listen")
@@ -298,7 +298,7 @@ func main() {
 	app.Start()
 }
 
-func createApp(serializer string, port int, grpc bool, isFrontend bool, svType string, serverMode pud.ServerMode, metadata map[string]string, cfg ...*viper.Viper) (pud.Pitaya, *modules.ETCDBindingStorage, session.SessionPool) {
+func createApp(serializer string, port int, grpc bool, isFrontend bool, svType string, serverMode pud.ServerMode, metadata map[string]string, cfg ...*viper.Viper) (pud.PudApp, *modules.ETCDBindingStorage, session.SessionPool) {
 	conf := config.NewConfig(cfg...)
 	builder := pud.NewBuilderWithConfigs(isFrontend, svType, serverMode, metadata, conf)
 

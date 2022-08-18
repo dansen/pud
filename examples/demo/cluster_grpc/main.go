@@ -20,7 +20,7 @@ import (
 	"github.com/dansen/pud/route"
 )
 
-var app pud.Pitaya
+var app pud.PudApp
 
 func configureBackend() {
 	room := services.NewRoom(app)
@@ -102,7 +102,7 @@ func main() {
 	app.Start()
 }
 
-func createApp(port int, isFrontend bool, svType string, meta map[string]string, rpcServerPort int) (pud.Pitaya, *modules.ETCDBindingStorage) {
+func createApp(port int, isFrontend bool, svType string, meta map[string]string, rpcServerPort int) (pud.PudApp, *modules.ETCDBindingStorage) {
 	builder := pud.NewDefaultBuilder(isFrontend, svType, pud.Cluster, meta, *config.NewDefaultBuilderConfig())
 
 	grpcServerConfig := config.NewDefaultGRPCServerConfig()

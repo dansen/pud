@@ -1,8 +1,4 @@
-## TODO
+## Pud game server framework
 
-3个游戏服务器
-3个聊天服务器
-
-1 用户登录，进入游戏服务器，随机一个游戏服务器
-2 
+A game server framework base on [pitaya](https://github.com/topfreegames/pitaya).
 

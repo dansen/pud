@@ -19,7 +19,7 @@ import (
 	"github.com/dansen/pud/route"
 )
 
-var app pud.Pitaya
+var app pud.PudApp
 
 func configureBackend() {
 	room := services.NewRoom(app)

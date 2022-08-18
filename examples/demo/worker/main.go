@@ -14,7 +14,7 @@ import (
 	"github.com/dansen/pud/examples/demo/worker/services"
 )
 
-var app pud.Pitaya
+var app pud.PudApp
 
 func configureWorker() {
 	worker := services.Worker{}

@@ -68,8 +68,8 @@ const (
 	Standalone
 )
 
-// Pitaya App interface
-type Pitaya interface {
+// PudApp App interface
+type PudApp interface {
 	GetDieChan() chan bool
 	SetDebug(debug bool)
 	SetHeartbeatTime(interval time.Duration)
@@ -253,7 +253,7 @@ func (app *App) GetServers() []*cluster.Server {
 	return app.serviceDiscovery.GetServers()
 }
 
-// IsRunning indicates if the Pitaya app has been initialized. Note: This
+// IsRunning indicates if the PudApp app has been initialized. Note: This
 // doesn't cover acceptors, only the pitaya internal registration and modules
 // initialization.
 func (app *App) IsRunning() bool {

@@ -15,14 +15,14 @@ type Worker struct {
 }
 
 // Configure starts workers and register rpc job
-func (w *Worker) Configure(app pud.Pitaya) {
+func (w *Worker) Configure(app pud.PudApp) {
 	app.StartWorker()
 	app.RegisterRPCJob(&RPCJob{app: app})
 }
 
 // RPCJob implements worker.RPCJob
 type RPCJob struct {
-	app pud.Pitaya
+	app pud.PudApp
 }
 
 // ServerDiscovery returns a serverID="", meaning any server

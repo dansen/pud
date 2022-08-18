@@ -31,7 +31,7 @@ import (
 	"github.com/dansen/pud/session/mocks"
 )
 
-func createGroupTestApp() Pitaya {
+func createGroupTestApp() PudApp {
 	config := config.NewDefaultBuilderConfig()
 	app := NewDefaultApp(true, "testtype", Cluster, map[string]string{}, *config)
 	return app

@@ -33,7 +33,7 @@ func createAcceptor(port int, reporters []metrics.Reporter) acceptor.Acceptor {
 		acceptorwrapper.NewRateLimitingWrapper(reporters, *rateLimitConfig))
 }
 
-var app pud.Pitaya
+var app pud.PudApp
 
 func main() {
 	port := flag.Int("port", 3250, "the port to listen")

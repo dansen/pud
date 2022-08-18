@@ -26,7 +26,7 @@ type (
 	Room struct {
 		component.Base
 		timer *timer.Timer
-		app   pud.Pitaya
+		app   pud.PudApp
 	}
 
 	// UserMessage represents a message that user sent
@@ -53,7 +53,7 @@ type (
 )
 
 // NewRoom returns a Handler Base implementation
-func NewRoom(app pud.Pitaya) *Room {
+func NewRoom(app pud.PudApp) *Room {
 	return &Room{
 		app: app,
 	}
@@ -103,7 +103,7 @@ func (r *Room) Message(ctx context.Context, msg *UserMessage) {
 	}
 }
 
-var app pud.Pitaya
+var app pud.PudApp
 
 func main() {
 	log.SetLogger(lowlevel.NewDefaultLogger())

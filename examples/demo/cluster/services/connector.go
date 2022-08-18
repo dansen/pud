@@ -14,13 +14,13 @@ import (
 // ConnectorRemote is a remote that will receive rpc's
 type ConnectorRemote struct {
 	component.Base
-	app pud.Pitaya
+	app pud.PudApp
 }
 
 // Connector struct
 type Connector struct {
 	component.Base
-	app pud.Pitaya
+	app pud.PudApp
 }
 
 // SessionData struct
@@ -35,12 +35,12 @@ type Response struct {
 }
 
 // NewConnector ctor
-func NewConnector(app pud.Pitaya) *Connector {
+func NewConnector(app pud.PudApp) *Connector {
 	return &Connector{app: app}
 }
 
 // NewConnectorRemote ctor
-func NewConnectorRemote(app pud.Pitaya) *ConnectorRemote {
+func NewConnectorRemote(app pud.PudApp) *ConnectorRemote {
 	return &ConnectorRemote{app: app}
 }
 

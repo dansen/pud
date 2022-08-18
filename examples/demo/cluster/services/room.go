@@ -19,7 +19,7 @@ type (
 	Room struct {
 		component.Base
 		timer *timer.Timer
-		app   pud.Pitaya
+		app   pud.PudApp
 		Stats *protos.Stats
 	}
 
@@ -65,7 +65,7 @@ type (
 )
 
 // NewRoom returns a new room
-func NewRoom(app pud.Pitaya) *Room {
+func NewRoom(app pud.PudApp) *Room {
 	return &Room{
 		app:   app,
 		Stats: &protos.Stats{},
