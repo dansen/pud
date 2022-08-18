@@ -21,11 +21,10 @@
 package timer
 
 import (
+	"github.com/dansen/pud/defaultlog/log"
 	"sync"
 	"sync/atomic"
 	"time"
-
-	"github.com/dansen/pud/internal/generic/log"
 )
 
 var timerBacklog int

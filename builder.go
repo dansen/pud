@@ -1,16 +1,15 @@
 package pud
 
 import (
-	"github.com/google/uuid"
 	"github.com/dansen/pud/acceptor"
 	"github.com/dansen/pud/agent"
 	"github.com/dansen/pud/cluster"
 	"github.com/dansen/pud/config"
 	"github.com/dansen/pud/conn/codec"
 	"github.com/dansen/pud/conn/message"
+	"github.com/dansen/pud/defaultlog/log"
 	"github.com/dansen/pud/defaultpipelines"
 	"github.com/dansen/pud/groups"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/metrics"
 	"github.com/dansen/pud/metrics/models"
 	"github.com/dansen/pud/pipeline"
@@ -20,6 +19,7 @@ import (
 	"github.com/dansen/pud/service"
 	"github.com/dansen/pud/session"
 	"github.com/dansen/pud/worker"
+	"github.com/google/uuid"
 )
 
 // Builder holds dependency instances for a pitaya App

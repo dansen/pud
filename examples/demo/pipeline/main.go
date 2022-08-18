@@ -4,12 +4,12 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 
 	"github.com/dansen/pud"
 	"github.com/dansen/pud/acceptor"
 	"github.com/dansen/pud/component"
 	"github.com/dansen/pud/config"
-	"github.com/dansen/pud/internal/generic/log"
 )
 
 // MetagameServer ...

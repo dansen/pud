@@ -23,7 +23,7 @@ package pud
 import (
 	"github.com/dansen/pud/cluster"
 	"github.com/dansen/pud/constants"
-	"github.com/dansen/pud/internal/generic/log"
+	"github.com/dansen/pud/defaultlog/log"
 	"github.com/dansen/pud/protos"
 	"github.com/dansen/pud/util"
 )

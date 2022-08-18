@@ -27,18 +27,18 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 	"io/ioutil"
 	"strings"
 	"time"
 
+	"github.com/dansen/pud/conn/message"
+	"github.com/dansen/pud/protos"
 	"github.com/golang/protobuf/proto"
 	protobuf "github.com/golang/protobuf/protoc-gen-go/descriptor"
 	"github.com/jhump/protoreflect/desc"
 	"github.com/jhump/protoreflect/dynamic"
 	"github.com/sirupsen/logrus"
-	"github.com/dansen/pud/conn/message"
-	"github.com/dansen/pud/internal/generic/log"
-	"github.com/dansen/pud/protos"
 )
 
 // Command struct. Save the input and output type and proto descriptor for each

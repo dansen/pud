@@ -22,12 +22,12 @@ package modules
 
 import (
 	"bufio"
+	"github.com/dansen/pud/defaultlog/log"
 	"os/exec"
 	"syscall"
 	"time"
 
 	"github.com/dansen/pud/constants"
-	"github.com/dansen/pud/internal/generic/log"
 )
 
 // Binary is a pitaya module that starts a binary as a child process and

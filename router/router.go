@@ -22,13 +22,13 @@ package router
 
 import (
 	"context"
+	"github.com/dansen/pud/defaultlog/log"
 	"math/rand"
 	"time"
 
 	"github.com/dansen/pud/cluster"
 	"github.com/dansen/pud/conn/message"
 	"github.com/dansen/pud/constants"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/protos"
 	"github.com/dansen/pud/route"
 )

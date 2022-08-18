@@ -22,13 +22,13 @@ package acceptor
 
 import (
 	"crypto/tls"
+	"github.com/dansen/pud/defaultlog/log"
 	"io"
 	"io/ioutil"
 	"net"
 
 	"github.com/dansen/pud/conn/codec"
 	"github.com/dansen/pud/constants"
-	"github.com/dansen/pud/internal/generic/log"
 )
 
 // TCPAcceptor struct

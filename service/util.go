@@ -23,14 +23,13 @@ package service
 import (
 	"context"
 	"errors"
+	"github.com/dansen/pud/defaultlog/log"
 	"reflect"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/dansen/pud/component"
 	"github.com/dansen/pud/conn/message"
 	"github.com/dansen/pud/constants"
 	e "github.com/dansen/pud/errors"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/logger/interfaces"
 	"github.com/dansen/pud/pipeline"
 	"github.com/dansen/pud/protos"
@@ -38,6 +37,7 @@ import (
 	"github.com/dansen/pud/serialize"
 	"github.com/dansen/pud/session"
 	"github.com/dansen/pud/util"
+	"github.com/golang/protobuf/proto"
 )
 
 var errInvalidMsg = errors.New("invalid message type provided")

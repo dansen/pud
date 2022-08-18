@@ -22,16 +22,16 @@ package metrics
 
 import (
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 
 	"net/http"
 	"sync"
 
-	"github.com/prometheus/client_golang/prometheus"
-	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/dansen/pud/config"
 	"github.com/dansen/pud/constants"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/metrics/models"
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 var (

@@ -22,12 +22,12 @@ package cluster
 
 import (
 	"context"
+	"github.com/dansen/pud/defaultlog/log"
 
 	"github.com/dansen/pud/conn/message"
 	"github.com/dansen/pud/constants"
 	pcontext "github.com/dansen/pud/context"
 	"github.com/dansen/pud/interfaces"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/protos"
 	"github.com/dansen/pud/route"
 	"github.com/dansen/pud/session"

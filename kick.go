@@ -22,9 +22,9 @@ package pud
 
 import (
 	"context"
+	"github.com/dansen/pud/defaultlog/log"
 
 	"github.com/dansen/pud/constants"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/protos"
 )
 

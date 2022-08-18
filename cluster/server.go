@@ -22,9 +22,8 @@ package cluster
 
 import (
 	"encoding/json"
+	"github.com/dansen/pud/defaultlog/log"
 	"os"
-
-	"github.com/dansen/pud/internal/generic/log"
 )
 
 // Server struct

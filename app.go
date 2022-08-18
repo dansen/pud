@@ -22,6 +22,7 @@ package pud
 
 import (
 	"context"
+	"github.com/dansen/pud/defaultlog/log"
 	"os"
 	"os/signal"
 	"reflect"
@@ -30,8 +31,6 @@ import (
 
 	"time"
 
-	"github.com/golang/protobuf/proto"
-	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/dansen/pud/acceptor"
 	"github.com/dansen/pud/cluster"
 	"github.com/dansen/pud/component"
@@ -43,7 +42,6 @@ import (
 	"github.com/dansen/pud/errors"
 	"github.com/dansen/pud/groups"
 	"github.com/dansen/pud/interfaces"
-	"github.com/dansen/pud/internal/generic/log"
 	logging "github.com/dansen/pud/logger/interfaces"
 	"github.com/dansen/pud/metrics"
 	mods "github.com/dansen/pud/modules"
@@ -55,6 +53,8 @@ import (
 	"github.com/dansen/pud/timer"
 	"github.com/dansen/pud/tracing"
 	"github.com/dansen/pud/worker"
+	"github.com/golang/protobuf/proto"
+	opentracing "github.com/opentracing/opentracing-go"
 )
 
 // ServerMode represents a server mode

@@ -22,16 +22,16 @@ package acceptor
 
 import (
 	"crypto/tls"
+	"github.com/dansen/pud/defaultlog/log"
 	"io"
 	"net"
 	"net/http"
 	"time"
 
-	"github.com/gorilla/websocket"
 	"github.com/dansen/pud/conn/codec"
 	"github.com/dansen/pud/conn/packet"
 	"github.com/dansen/pud/constants"
-	"github.com/dansen/pud/internal/generic/log"
+	"github.com/gorilla/websocket"
 )
 
 // WSAcceptor struct

@@ -22,9 +22,9 @@ package pud
 
 import (
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 
 	"github.com/dansen/pud/interfaces"
-	"github.com/dansen/pud/internal/generic/log"
 )
 
 type moduleWrapper struct {

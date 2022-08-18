@@ -3,14 +3,14 @@ package services
 import (
 	"context"
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 	"time"
 
-	"github.com/google/uuid"
 	"github.com/dansen/pud"
 	"github.com/dansen/pud/component"
 	"github.com/dansen/pud/examples/demo/protos"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/timer"
+	"github.com/google/uuid"
 )
 
 type (

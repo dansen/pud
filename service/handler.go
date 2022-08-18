@@ -24,16 +24,15 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 	"strings"
 	"time"
 
 	"github.com/nats-io/nuid"
 
 	"github.com/dansen/pud/acceptor"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/pipeline"
 
-	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/dansen/pud/agent"
 	"github.com/dansen/pud/cluster"
 	"github.com/dansen/pud/component"
@@ -50,6 +49,7 @@ import (
 	"github.com/dansen/pud/session"
 	"github.com/dansen/pud/timer"
 	"github.com/dansen/pud/tracing"
+	opentracing "github.com/opentracing/opentracing-go"
 )
 
 var (

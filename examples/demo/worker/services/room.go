@@ -2,11 +2,11 @@ package services
 
 import (
 	"context"
+	"github.com/dansen/pud/defaultlog/log"
 
 	"github.com/dansen/pud"
 	"github.com/dansen/pud/component"
 	"github.com/dansen/pud/examples/demo/worker/protos"
-	"github.com/dansen/pud/internal/generic/log"
 )
 
 // Room server

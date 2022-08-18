@@ -23,9 +23,8 @@ package route
 import (
 	"errors"
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 	"strings"
-
-	"github.com/dansen/pud/internal/generic/log"
 )
 
 var (

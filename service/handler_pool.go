@@ -3,13 +3,13 @@ package service
 import (
 	"context"
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 	"reflect"
 
 	"github.com/dansen/pud/component"
 	"github.com/dansen/pud/conn/message"
 	"github.com/dansen/pud/constants"
 	e "github.com/dansen/pud/errors"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/logger/interfaces"
 	"github.com/dansen/pud/pipeline"
 	"github.com/dansen/pud/route"

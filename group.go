@@ -22,10 +22,10 @@ package pud
 
 import (
 	"context"
+	"github.com/dansen/pud/defaultlog/log"
 	"time"
 
 	"github.com/dansen/pud/constants"
-	"github.com/dansen/pud/internal/generic/log"
 )
 
 // Group represents an agglomeration of UIDs which is used to manage

@@ -26,6 +26,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 	"net"
 	"net/url"
 	"sync"
@@ -33,11 +34,8 @@ import (
 	"time"
 
 	"github.com/dansen/pud/acceptor"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/util"
 
-	"github.com/gorilla/websocket"
-	"github.com/sirupsen/logrus"
 	"github.com/dansen/pud"
 	"github.com/dansen/pud/conn/codec"
 	"github.com/dansen/pud/conn/message"
@@ -46,6 +44,8 @@ import (
 	logruswrapper "github.com/dansen/pud/logger/logrus"
 	"github.com/dansen/pud/session"
 	"github.com/dansen/pud/util/compression"
+	"github.com/gorilla/websocket"
+	"github.com/sirupsen/logrus"
 )
 
 // HandshakeSys struct

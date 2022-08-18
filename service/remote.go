@@ -24,6 +24,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 	"reflect"
 
 	"github.com/golang/protobuf/proto"
@@ -36,7 +37,6 @@ import (
 	"github.com/dansen/pud/constants"
 	"github.com/dansen/pud/docgenerator"
 	e "github.com/dansen/pud/errors"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/pipeline"
 	"github.com/dansen/pud/protos"
 	"github.com/dansen/pud/route"

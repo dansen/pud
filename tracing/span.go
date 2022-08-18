@@ -22,11 +22,11 @@ package tracing
 
 import (
 	"context"
+	"github.com/dansen/pud/defaultlog/log"
 
-	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/dansen/pud/constants"
 	pcontext "github.com/dansen/pud/context"
-	"github.com/dansen/pud/internal/generic/log"
+	opentracing "github.com/opentracing/opentracing-go"
 )
 
 func castValueToCarrier(val interface{}) (opentracing.TextMapCarrier, error) {

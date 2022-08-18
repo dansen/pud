@@ -23,14 +23,14 @@ package worker
 import (
 	"context"
 	"encoding/json"
+	"github.com/dansen/pud/defaultlog/log"
 	"os"
 
-	"github.com/golang/protobuf/proto"
-	workers "github.com/topfreegames/go-workers"
 	"github.com/dansen/pud/config"
 	"github.com/dansen/pud/constants"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/logger/interfaces"
+	"github.com/golang/protobuf/proto"
+	workers "github.com/topfreegames/go-workers"
 )
 
 // Worker executes RPCs with retry and backoff time

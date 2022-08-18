@@ -4,6 +4,8 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
+	"github.com/dansen/pud/defaultlog/log/lowlevel"
 
 	"strings"
 
@@ -14,8 +16,6 @@ import (
 	"github.com/dansen/pud/config"
 	"github.com/dansen/pud/examples/demo/cluster/services"
 	"github.com/dansen/pud/groups"
-	"github.com/dansen/pud/internal/generic/log"
-	"github.com/dansen/pud/internal/generic/log/lowlevel"
 	"github.com/dansen/pud/route"
 )
 

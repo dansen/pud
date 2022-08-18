@@ -23,22 +23,22 @@ package cluster
 import (
 	"context"
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 	"sync"
 	"time"
 
-	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/dansen/pud/config"
 	"github.com/dansen/pud/conn/message"
 	"github.com/dansen/pud/constants"
 	pcontext "github.com/dansen/pud/context"
 	pitErrors "github.com/dansen/pud/errors"
 	"github.com/dansen/pud/interfaces"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/metrics"
 	"github.com/dansen/pud/protos"
 	"github.com/dansen/pud/route"
 	"github.com/dansen/pud/session"
 	"github.com/dansen/pud/tracing"
+	opentracing "github.com/opentracing/opentracing-go"
 	"google.golang.org/grpc"
 )
 

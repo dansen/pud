@@ -1,10 +1,10 @@
 package worker
 
 import (
+	"github.com/dansen/pud/defaultlog/log"
 	"strconv"
 	"time"
 
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/metrics"
 
 	workers "github.com/topfreegames/go-workers"

@@ -22,9 +22,9 @@ package cluster
 
 import (
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 
 	nats "github.com/nats-io/nats.go"
-	"github.com/dansen/pud/internal/generic/log"
 )
 
 func getChannel(serverType, serverID string) string {

@@ -22,8 +22,7 @@ package pipeline
 
 import (
 	"context"
-
-	"github.com/dansen/pud/internal/generic/log"
+	"github.com/dansen/pud/defaultlog/log"
 )
 
 type (

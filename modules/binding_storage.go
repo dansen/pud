@@ -23,12 +23,12 @@ package modules
 import (
 	"context"
 	"fmt"
+	"github.com/dansen/pud/defaultlog/log"
 	"time"
 
 	"github.com/dansen/pud/cluster"
 	"github.com/dansen/pud/config"
 	"github.com/dansen/pud/constants"
-	"github.com/dansen/pud/internal/generic/log"
 	"github.com/dansen/pud/session"
 	clientv3 "go.etcd.io/etcd/client/v3"
 	"go.etcd.io/etcd/client/v3/namespace"
