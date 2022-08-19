@@ -24,8 +24,9 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/dansen/pud/defaultlog/log"
 	"reflect"
+
+	"github.com/dansen/pud/defaultlog/log"
 
 	"github.com/golang/protobuf/proto"
 
@@ -313,7 +314,7 @@ func (r *RemoteService) handleRPCUser(ctx context.Context, req *protos.Request, 
 
 	remote, ok := r.remotes[rt.Short()]
 	if !ok {
-		log.Warnf("pitaya/remote: %s not found", rt.Short())
+		log.Warnf("pud/remote: %s not found", rt.Short())
 		response := &protos.Response{
 			Error: &protos.Error{
 				Code: e.ErrNotFoundCode,
