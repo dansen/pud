@@ -3,11 +3,12 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/dansen/pud/defaultlog/log"
-	"github.com/dansen/pud/defaultlog/log/lowlevel"
 	"net/http"
 	"strconv"
 	"time"
+
+	"github.com/dansen/pud/logger/log"
+	"github.com/dansen/pud/logger/log/lowlevel"
 
 	"strings"
 

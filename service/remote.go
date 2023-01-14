@@ -26,7 +26,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/dansen/pud/defaultlog/log"
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/golang/protobuf/proto"
 

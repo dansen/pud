@@ -22,7 +22,7 @@ package pud
 
 import (
 	"github.com/dansen/pud/component"
-	"github.com/dansen/pud/defaultlog/log"
+	"github.com/dansen/pud/logger/log"
 )
 
 type regComp struct {

@@ -22,7 +22,8 @@ package cluster
 
 import (
 	"context"
-	"github.com/dansen/pud/defaultlog/log"
+
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/dansen/pud/conn/message"
 	"github.com/dansen/pud/constants"

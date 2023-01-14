@@ -22,7 +22,8 @@ package tracing
 
 import (
 	"context"
-	"github.com/dansen/pud/defaultlog/log"
+
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/dansen/pud/constants"
 	pcontext "github.com/dansen/pud/context"

@@ -22,7 +22,8 @@ package metrics
 
 import (
 	"fmt"
-	"github.com/dansen/pud/defaultlog/log"
+
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/DataDog/datadog-go/statsd"
 	"github.com/dansen/pud/config"

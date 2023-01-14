@@ -22,7 +22,8 @@ package pipeline
 
 import (
 	"context"
-	"github.com/dansen/pud/defaultlog/log"
+
+	"github.com/dansen/pud/logger/log"
 )
 
 type (

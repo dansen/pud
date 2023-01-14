@@ -22,12 +22,13 @@ package pud
 
 import (
 	"context"
-	"github.com/dansen/pud/defaultlog/log"
 	"os"
 	"os/signal"
 	"reflect"
 	"strings"
 	"syscall"
+
+	"github.com/dansen/pud/logger/log"
 
 	"time"
 

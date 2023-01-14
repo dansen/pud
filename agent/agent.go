@@ -31,7 +31,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/dansen/pud/defaultlog/log"
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/dansen/pud/conn/codec"
 	"github.com/dansen/pud/conn/message"

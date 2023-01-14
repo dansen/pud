@@ -23,9 +23,10 @@ package cluster
 import (
 	"context"
 	"fmt"
-	"github.com/dansen/pud/defaultlog/log"
 	"sync"
 	"time"
+
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/dansen/pud/config"
 	"github.com/dansen/pud/conn/message"

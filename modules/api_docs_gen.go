@@ -22,7 +22,7 @@ package modules
 
 import (
 	"github.com/dansen/pud/component"
-	"github.com/dansen/pud/defaultlog/log"
+	"github.com/dansen/pud/logger/log"
 )
 
 // APIDocsGen is a pitaya module that generates api docs for pitaya servers

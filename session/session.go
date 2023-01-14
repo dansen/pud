@@ -29,7 +29,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/dansen/pud/defaultlog/log"
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/dansen/pud/constants"
 	"github.com/dansen/pud/networkentity"

@@ -4,8 +4,9 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"github.com/dansen/pud/defaultlog/log"
-	"github.com/dansen/pud/defaultlog/log/lowlevel"
+
+	"github.com/dansen/pud/logger/log"
+	"github.com/dansen/pud/logger/log/lowlevel"
 
 	"strings"
 

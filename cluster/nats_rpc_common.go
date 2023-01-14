@@ -22,7 +22,8 @@ package cluster
 
 import (
 	"fmt"
-	"github.com/dansen/pud/defaultlog/log"
+
+	"github.com/dansen/pud/logger/log"
 
 	nats "github.com/nats-io/nats.go"
 )

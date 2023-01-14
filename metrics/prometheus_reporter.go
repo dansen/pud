@@ -22,7 +22,8 @@ package metrics
 
 import (
 	"fmt"
-	"github.com/dansen/pud/defaultlog/log"
+
+	"github.com/dansen/pud/logger/log"
 
 	"net/http"
 	"sync"

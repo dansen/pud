@@ -25,7 +25,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/dansen/pud/defaultlog/log"
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/dansen/pud/cluster"
 	"github.com/dansen/pud/conn/message"

@@ -23,8 +23,9 @@ package modules
 import (
 	"context"
 	"fmt"
-	"github.com/dansen/pud/defaultlog/log"
 	"time"
+
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/dansen/pud/cluster"
 	"github.com/dansen/pud/config"

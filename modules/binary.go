@@ -22,10 +22,11 @@ package modules
 
 import (
 	"bufio"
-	"github.com/dansen/pud/defaultlog/log"
 	"os/exec"
 	"syscall"
 	"time"
+
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/dansen/pud/constants"
 )

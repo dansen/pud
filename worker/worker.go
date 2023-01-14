@@ -23,8 +23,9 @@ package worker
 import (
 	"context"
 	"encoding/json"
-	"github.com/dansen/pud/defaultlog/log"
 	"os"
+
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/dansen/pud/config"
 	"github.com/dansen/pud/constants"

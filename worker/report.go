@@ -1,9 +1,10 @@
 package worker
 
 import (
-	"github.com/dansen/pud/defaultlog/log"
 	"strconv"
 	"time"
+
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/dansen/pud/metrics"
 

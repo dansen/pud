@@ -22,8 +22,9 @@ package acceptorwrapper
 
 import (
 	"container/list"
-	"github.com/dansen/pud/defaultlog/log"
 	"time"
+
+	"github.com/dansen/pud/logger/log"
 
 	"github.com/dansen/pud/acceptor"
 	"github.com/dansen/pud/constants"
