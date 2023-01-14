@@ -27,8 +27,8 @@ import (
 	"github.com/dansen/pud/session"
 )
 
-// PitayaClient iface
-type PitayaClient interface {
+// PudClient iface
+type PudClient interface {
 	ConnectTo(addr string, tlsConfig ...*tls.Config) error
 	ConnectToWS(addr string, path string, tlsConfig ...*tls.Config) error
 	ConnectedStatus() bool
