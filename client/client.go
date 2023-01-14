@@ -361,8 +361,10 @@ func (c *Client) ConnectTo(addr string, tlsConfig ...*tls.Config) error {
 	c.conn = conn
 	c.IncomingMsgChan = make(chan *message.Message, 10)
 
-	if err = c.handleHandshake(); err != nil {
-		return err
+	if c.clientHandshakeData != nil {
+		if err = c.handleHandshake(); err != nil {
+			return err
+		}
 	}
 
 	c.closeChan = make(chan struct{})
