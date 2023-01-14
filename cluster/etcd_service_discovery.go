@@ -436,7 +436,7 @@ func (sd *etcdServiceDiscovery) printServers() {
 	sd.mapByTypeLock.RLock()
 	defer sd.mapByTypeLock.RUnlock()
 	for k, v := range sd.serverMapByType {
-		log.Debugf("type: %s, servers: %+v", k, v)
+		log.Infof("type: %s, servers: %+v", k, v)
 	}
 }
 
