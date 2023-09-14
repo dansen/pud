@@ -368,6 +368,7 @@ func (c *Client) ConnectTo(addr string, tlsConfig ...*tls.Config) error {
 	}
 
 	c.closeChan = make(chan struct{})
+	c.Connected = true
 
 	return nil
 }
